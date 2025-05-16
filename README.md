@@ -25,7 +25,7 @@ A sleek, touch-friendly to-do list module for [MagicMirror²](https://magicmirro
 
 - MagicMirror² (latest version)
 - TouchScreen Display
-- [`MMM-Keyboard`](https://github.com/thobach/MMM-Keyboard) — used for on-screen text input
+- [`MMM-Keyboard`](https://github.com/lavolp3/MMM-Keyboard) — used for on-screen text input
 - [`MMM-SmartTouch`](https://github.com/EbenKouao/MMM-SmartTouch) — used for TouchScreen input
 
 ---
