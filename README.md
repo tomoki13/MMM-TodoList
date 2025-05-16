@@ -1,4 +1,5 @@
-# MMM-TodoList
+# MMM-TodoList ![image](https://github.com/user-attachments/assets/a1e49061-ba8b-4e55-b563-dca3dc1c9708)
+
 
 A sleek, touch-friendly to-do list module for [MagicMirror²](https://magicmirror.builders/), with multi-user support, animated task handling, and persistent storage. Designed for collaborative or personal setups using a touchscreen MagicMirror.
 
