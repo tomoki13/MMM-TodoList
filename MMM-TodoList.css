@@ -1,0 +1,184 @@
+.todo-module {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+  padding-bottom: 60px;
+}
+
+.todo-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
+  margin-bottom: 10px;
+  z-index: 10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* ✅ Restore border */
+}
+
+.todo-tabs {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.todo-tabs button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.todo-tabs button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-tabs button.active {
+  background: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+}
+
+.todo-toggle-complete {
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.todo-list {
+  max-height: 250px;
+  min-height: 100px; /* 👈 Add this line */
+  overflow-y: auto;
+  margin-bottom: 10px;
+  transition: opacity 0.4s ease;
+  opacity: 1;
+}
+
+
+.todo-list.fade-out {
+  opacity: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.todo-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.todo-item.bounce-in {
+  animation: bounceIn 0.5s;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.todo-item input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-item span {
+  font-size: 16px;
+  color: #fff;
+  margin-right: 5px;
+}
+
+.todo-edit-btn, .todo-del-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  margin-left: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.todo-edit-btn:hover, .todo-del-btn:hover {
+  color: #ccc;
+}
+
+.todo-add {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, 100%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.todo-add:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.todo-confirm-modal {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 999;
+}
+
+.todo-confirm-message {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.todo-confirm-buttons button {
+  font-size: 20px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.todo-confirm-buttons button:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: scale(0.5) translateY(20px); }
+  60% { opacity: 1; transform: scale(1.1) translateY(-5px); }
+  80% { transform: scale(0.95) translateY(2px); }
+  100% { transform: scale(1) translateY(0); }
+}
+
