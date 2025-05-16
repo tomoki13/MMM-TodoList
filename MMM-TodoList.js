@@ -1,6 +1,6 @@
 Module.register("MMM-TodoList", {
   defaults: {
-    members: ["Bpb", "George", "Tom"]
+    members: ["Bob", "George", "Tom"]
   },
 
   start() {
