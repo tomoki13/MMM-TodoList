@@ -36,7 +36,7 @@ A sleek, touch-friendly to-do list module for [MagicMirror²](https://magicmirro
 
 ```bash
 cd ~/MagicMirror/modules
-git clone https://github.com/YOUR_USERNAME/MMM-TodoList.git
+git clone https://github.com/tomoki13/MMM-TodoList.git
 ```
 
 2. Install and configure both [`MMM-Keyboard`](https://github.com/lavolp3/MMM-Keyboard) if not already present.
